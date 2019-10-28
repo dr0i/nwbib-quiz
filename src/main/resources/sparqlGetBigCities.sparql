@@ -1,0 +1,11 @@
+#get cities in NRW > 100K population
+curl -L -H "Accept:text/csv" https://query.wikidata.org/sparql  -d query='
+SELECT DISTINCT ?city ?cityLabel ?populatie ?location WHERE {
+  ?city wdt:P6814 ?o ;
+        wdt:P1082 ?populatie ;
+        wdt:P31 wd:Q1549591  ;
+        wdt:P625 ?location .
+  FILTER (?populatie > 1000000)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],de" }
+}
+'
