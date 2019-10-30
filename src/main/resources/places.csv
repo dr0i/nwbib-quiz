@@ -1,2 +1,32 @@
-city,cityLabel,populatie,location
-http://www.wikidata.org/entity/Q365,Köln,1080394.0,Point(6.957777777 50.942222222)
+city,cityLabel,pop,location,img
+http://www.wikidata.org/entity/Q2880,Hamm,179185.0,Point(7.825 51.67194),http://commons.wikimedia.org/wiki/Special:FilePath/Hamm%20Luftbild%20Innenstadt%202007.jpg
+http://www.wikidata.org/entity/Q2871,Hagen,187730.0,Point(7.475 51.359444444),http://commons.wikimedia.org/wiki/Special:FilePath/Hagen%20Rathausplatz.jpg
+http://www.wikidata.org/entity/Q1718,Düsseldorf,617280.0,Point(6.7724 51.2311),http://commons.wikimedia.org/wiki/Special:FilePath/D%C3%BCsseldorf%20Panorama.jpg
+http://www.wikidata.org/entity/Q2107,Wuppertal,352390.0,Point(7.1728 51.2606),http://commons.wikimedia.org/wiki/Special:FilePath/Wuppertal%20ansicht.jpg
+http://www.wikidata.org/entity/Q2765,Gelsenkirchen,262528.0,Point(7.1 51.516666666),http://commons.wikimedia.org/wiki/Special:FilePath/Gelsenkirchen%20aug2004%20002.jpg
+http://www.wikidata.org/entity/Q2899,Mülheim an der Ruhr,170936.0,Point(6.878888888 51.428333333),http://commons.wikimedia.org/wiki/Special:FilePath/Schloss%20Broich%200504.jpg
+http://www.wikidata.org/entity/Q2112,Bielefeld,332552.0,Point(8.533333333 52.016666666),http://commons.wikimedia.org/wiki/Special:FilePath/Sparrenburg%20innovative%20sights.JPG
+http://www.wikidata.org/entity/Q3050,Recklinghausen,113360.0,Point(7.2 51.616666666),http://commons.wikimedia.org/wiki/Special:FilePath/Recklinghausen%2C%20Rathaus%20--%202015%20--%207398.jpg
+http://www.wikidata.org/entity/Q2942,Solingen,158803.0,Point(7.083333333 51.166666666),http://commons.wikimedia.org/wiki/Special:FilePath/Clemens.jpg
+http://www.wikidata.org/entity/Q3097,Remscheid,110584.0,Point(7.2 51.183333333),http://commons.wikimedia.org/wiki/Special:FilePath/Remscheid%20rathaus.jpg
+http://www.wikidata.org/entity/Q2904,Herne,156490.0,Point(7.21897 51.54258),http://commons.wikimedia.org/wiki/Special:FilePath/Cranger%20Kirmes%20-%20panoramio.jpg
+http://www.wikidata.org/entity/Q3167,Siegen,102337.0,Point(8.016666666 50.875555555),http://commons.wikimedia.org/wiki/Special:FilePath/Siegen%20-%20panoramio%20%289%29.jpg
+http://www.wikidata.org/entity/Q2971,Paderborn,149075.0,Point(8.7667 51.7167),http://commons.wikimedia.org/wiki/Special:FilePath/Dom%20zu%20paderborn1.jpg
+http://www.wikidata.org/entity/Q2103,Bochum,364628.0,Point(7.216666666 51.483333333),http://commons.wikimedia.org/wiki/Special:FilePath/Bergbaumuseum%20Bochum%20bei%20Nacht.JPG
+http://www.wikidata.org/entity/Q2971,Paderborn,149075.0,Point(8.7667 51.7167),http://commons.wikimedia.org/wiki/Special:FilePath/Rathaus%20Paderborn%202.jpg
+http://www.wikidata.org/entity/Q3117,Bergisch Gladbach,111627.0,Point(7.136666666 50.991666666),http://commons.wikimedia.org/wiki/Special:FilePath/Ausblick%20Bergisch%20Gladbach.jpg
+http://www.wikidata.org/entity/Q3132,Moers,103949.0,Point(6.619722222 51.459166666),http://commons.wikimedia.org/wiki/Special:FilePath/Moers%20schloss%20211204.jpg
+http://www.wikidata.org/entity/Q2758,Mönchengladbach,260925.0,Point(6.433333333 51.2),http://commons.wikimedia.org/wiki/Special:FilePath/M%C3%B6nchengladbach%20m%C3%BCnster.jpg
+http://www.wikidata.org/entity/Q2838,Oberhausen,211382.0,Point(6.85 51.55),http://commons.wikimedia.org/wiki/Special:FilePath/Oberhausen%20-%20Neue%20Mitte%2BGasometer%20%28Aussichtsturm%20Knappenhalde%29%2001%20ies.jpg
+http://www.wikidata.org/entity/Q3069,Bottrop,117364.0,Point(6.922777777 51.524722222),http://commons.wikimedia.org/wiki/Special:FilePath/Altmarkt%20Horster%20Str.%20Bottrop.JPG
+http://www.wikidata.org/entity/Q2066,Essen,590194.0,Point(7.013055555 51.450833333),http://commons.wikimedia.org/wiki/Special:FilePath/Essen-S%C3%BCdviertel%20Luft.jpg
+http://www.wikidata.org/entity/Q2948,Neuss,153810.0,Point(6.693888888 51.200277777),http://commons.wikimedia.org/wiki/Special:FilePath/Neuss%2C%20Rathaus%202008.JPG
+http://www.wikidata.org/entity/Q1295,Dortmund,585813.0,Point(7.465277777 51.513888888),http://commons.wikimedia.org/wiki/Special:FilePath/Phoenixsee%20Dortmund%2C%20Deutschland.jpg
+http://www.wikidata.org/entity/Q365,Köln,1080394.0,Point(6.957777777 50.942222222),http://commons.wikimedia.org/wiki/Special:FilePath/Stadtbild%20K%C3%B6ln%20%2850MP%29.jpg
+http://www.wikidata.org/entity/Q1017,Aachen,246272.0,Point(6.0838 50.7762),http://commons.wikimedia.org/wiki/Special:FilePath/Blick%20AC%20Dom%20von%20St%20Jakob.JPG
+http://www.wikidata.org/entity/Q2938,Leverkusen,163113.0,Point(6.983333333 51.033333333),http://commons.wikimedia.org/wiki/Special:FilePath/Leverkusen-Schloss-Morsbroich%20Hauptgeb%C3%A4ude.jpg
+http://www.wikidata.org/entity/Q2742,Münster,313559.0,Point(7.6256 51.9625),http://commons.wikimedia.org/wiki/Special:FilePath/Muenster-100725-16079-Lamberti.jpg
+http://www.wikidata.org/entity/Q2100,Duisburg,498590.0,Point(6.7611 51.4322),http://commons.wikimedia.org/wiki/Special:FilePath/Duisburg%20-%20Schwanentorbr%C3%BCcke%201.jpg
+http://www.wikidata.org/entity/Q586,Bonn,327919.0,Point(7.099722222 50.733888888),http://commons.wikimedia.org/wiki/Special:FilePath/Altes%20Rathaus%20Bonn.jpg
+http://www.wikidata.org/entity/Q2103,Bochum,364920.0,Point(7.216666666 51.483333333),http://commons.wikimedia.org/wiki/Special:FilePath/Bergbaumuseum%20Bochum%20bei%20Nacht.JPG
+http://www.wikidata.org/entity/Q2805,Krefeld,226699.0,Point(6.566666666 51.333333333),http://commons.wikimedia.org/wiki/Special:FilePath/Pottb.jpg
