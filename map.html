@@ -1,11 +1,19 @@
 
 <html>
 <head>
-  <title>Kartenvisualiserung für das NRW-Quiz </title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
-   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-<script src="https://unpkg.com/geotiff@0.4.1/dist/geotiff.browserify.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
+ <meta charset="UTF-8">
+  <title>Kartenvisualiserung fuer das NRW-Quiz </title>
+<link rel="stylesheet" href="assets/leaflet@1.5.1/dist/leaflet.css"/>
+   <script src="assets/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="assets/jquery-2.1.4.min.js"></script>
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fancybox@3.0.1/dist/css/jquery.fancybox.css">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mapposition" src="js/mapposition.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="map" src="js/map.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="game" src="js/game.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="data" src="js/data.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
   <style>
     #map{ height: 100% }
   </style>
@@ -14,8 +22,8 @@
 
   <div id="map"></div>
 
-  <script>
-
+<!--<script type="text/javascript" data-main="js/locationguessgame" src="assets/ajax/2.3.5/require.min.js">-->
+ <script> 
   // initialize the map
   var map = L.map('map').setView([51.513888888, 7.465277777], 8);
 //var layer = L.leafletGeotiff(url="https://lobid.org/download/tmp/42909.tif").addTo(map);
