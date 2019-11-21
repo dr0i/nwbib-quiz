@@ -1,61 +1,17 @@
-
 <html>
 <head>
  <meta charset="UTF-8">
   <title>Kartenvisualiserung fuer das NRW-Quiz </title>
-<link rel="stylesheet" href="assets/leaflet@1.5.1/dist/leaflet.css"/>
-   <script src="assets/leaflet@1.5.1/dist/leaflet.js"></script>
-    <script src="assets/jquery-2.1.4.min.js"></script>
-
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fancybox@3.0.1/dist/css/jquery.fancybox.css">
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mapposition" src="js/mapposition.js"></script>
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="map" src="js/map.js"></script>
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="game" src="js/game.js"></script>
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="data" src="js/data.js"></script>
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
+  <link rel="stylesheet" href="assets/leaflet@1.5.1/dist/leaflet.css"/>
+  <script src="assets/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script src="assets/jquery-2.1.4.min.js"></script>
   <style>
     #map{ height: 100% }
   </style>
 </head>
 <body>
-
   <div id="map"></div>
-
-<script type="text/javascript" data-main="js/locationguessgame" src="assets/ajax/2.3.5/require.min.js">
-  // initialize the map
-<!-- var map = L.map('map').setView([51.513888888, 7.465277777], 8);
-//var layer = L.leafletGeotiff(url="https://lobid.org/download/tmp/42909.tif").addTo(map);
-
-  L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-      attribution: 'Tiles by <a href="http://a.tile.openstreetmap.org">OSM</a>',
-      maxZoom: 13,
-      minZoom: 6
-    }).addTo(map);
-
-//https://www.mapwarper.net/maps/tile/42913/{z}/{x}/{y}.png  // 42909 // 13 //16
-  L.tileLayer('https://www.mapwarper.net/maps/tile/42913/{z}/{x}/{y}.png',
-    {
-      attribution: 'Tiles by <a href="http://a.tile.openstreetmap.org">OSM</a>',
-      maxZoom: 13,
-      minZoom: 6
-    }).addTo(map);
-
-
-
-  // load GeoJSON from an external file
-  $.getJSON("places.geojson",function(data){
-    L.geoJson(data ,{
-pointToLayer: function(feature,latlng){
-      var marker = L.marker(latlng);
-      marker.bindPopup("Name: <a href="+feature.properties.id+ '>'+feature.properties.label + '</a><br/>Population:' + feature.properties.pop);
-      return marker;
-    }
-
-}).addTo(map);
-  });
--->
+  <script type="text/javascript" data-main="js/locationguessgame" src="assets/ajax/2.3.5/require.min.js">
   </script>
 </body>
 </html>
