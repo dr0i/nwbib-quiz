@@ -6,8 +6,8 @@ define(["jquery", "leaflet", "leaflet.ajax", "mapclick", "data"], function ($, l
 			maxZoom: data.mapConfig.maxZoom,
 			minZoom: data.mapConfig.minZoom
 		}).addTo(map);
-		leaflet.tileLayer('https://www.mapwarper.net/maps/tile/42913/{z}/{x}/{y}.png', {
-			attribution: data.mapConfig.mapwrapperAttribution,
+		leaflet.tileLayer('http://www.mapwarper.net/maps/tile/42913/{z}/{x}/{y}.png', {
+			attribution: data.mapConfig.mapWarperAttribution,
 			maxZoom: data.mapConfig.maxZoom,
 			minZoom: data.mapConfig.minZoom
 		}).addTo(map);

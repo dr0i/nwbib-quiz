@@ -6,7 +6,7 @@ define({
 		maxZoom: 9,
 		minZoom: 6,
 		attribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>',
-		mapwrapperAttribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>'
+		mapWarperAttribution: 'Map data &#64; <a href="http://mapwarper.net/">MapWarper</a> contributors</a>'
 	},
 	gameData: function() {
 		var index = 0;
