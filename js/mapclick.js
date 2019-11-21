@@ -3,11 +3,7 @@ define(["leaflet", "jquery"], function(leaflet, $) {
 		return {
 			handleClickOnMap: function(e) {
 					if(gameData.isRoundInit()) return;
-				var isClickOnPhoto = e.originalEvent && e.originalEvent.originalTarget 
-				        && e.originalEvent.originalTarget.id == "photo";
-				if(isClickOnPhoto) return;
-
-				// disable setting marker on map when clicking on button					
+				// disable setting marker on map when clicking on button
 					var clickPos = e.containerPoint;
 					var buttonPos = $("#checkLocationButton").offset();
 					var buttonX2 = buttonPos.left + $("#checkLocationButton").width();
