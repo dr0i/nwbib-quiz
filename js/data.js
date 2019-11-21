@@ -5,15 +5,18 @@ define({
 	mapConfig: {
 		center: [51.513888888, 7.465277777],
 		zoom: 8,
-		attribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>'
+		maxZoom: 9,
+		minZoom: 6,
+		attribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>',
+		mapwrapperAttribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>'
 	},
 	gameData: function() {
 		var index = 0;
 		var roundInit = false;
 		var alreadyPlayed = [];
 		var data = undefined;
-		var imageUrl = "https://opendata.leipzig.de/dataset/b6345cf9-f6d4-5d46-acb2-54b2fb5f44a8/resource/c56862da-d905-4413-bd84-8fa88300c6e8/download/tmparchivba198110690.jpg";
-		var imageGeoPosition = [51.34112905, 12.3739930321092];
+		var imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Dortmund_Panorama.jpg/320px-Dortmund_Panorama.jpg";
+		var imageGeoPosition = [50.942222222, 6.957777777];
 
 		var createNewIndex = function() {
 			return Math.floor(Math.random() * Math.floor(data.features.length));
@@ -58,6 +61,13 @@ define({
 					return imageUrl;
 				}
 			},
+			getCityName: function() {
+				if (data) {
+					return data.features[index].properties["label"] || location;
+				} else {
+					return imageUrl;
+				}
+		},
 			getImageGeoPosition: function() {
 				if (data) {
 					var coords = data.features[index].geometry.coordinates;
