@@ -5,17 +5,17 @@ define(
 				var scores = 0;
 
 				var getThisRoundScore = function(distance) {
-					if (distance < 50) {
+					if (distance < 10000) {
 						return 100;
-					} else if (distance < 100) {
+					} else if (distance < 15000) {
 						return 85;
-					} else if (distance < 200) {
+					} else if (distance < 20000) {
 						return 70;
-					} else if (distance < 400) {
+					} else if (distance < 25000) {
 						return 55;
-					} else if (distance < 800) {
+					} else if (distance < 30000) {
 						return 40;
-					} else if (distance < 1500) {
+					} else if (distance < 35000) {
 						return 25;
 					} else {
 						return 0;
@@ -42,11 +42,7 @@ define(
 					var thisRoundScore = getThisRoundScore(distance);
 					scores = scores + thisRoundScore;
 
-					if (distance > 1000) {
-						distanceStr = (distance / 1000).toPrecision(1) + " km"
-					} else {
-						distanceStr = distance.toFixed(0) + " m"
-					}
+					distanceStr = Math.round(distance.toFixed(0)/1000) + " km"
 
 					var lastSentence;
 					if (gameData.hasNextRound()) {
@@ -58,16 +54,12 @@ define(
 					}
 
 					alert("Ihr Marker ist " + distanceStr
-							+ " vom tatsächlichen Ort entfernt."
+							+ " von " + gameData.getCityName() + " entfernt."
 							+ "\nSie bekommen " + thisRoundScore + " Punkte."
 							+ "\n" + lastSentence);
 
 					if (gameData.hasNextRound()) {
-						$("#checkLocationButton").html('Nächste Runde');
-						$("#checkLocationButton").unbind('click');
-						$("#checkLocationButton").on('click', function(e) {
 							nextLocation();
-						});
 					} else {
 						$("#checkLocationButton").html('Neu starten');
 						$("#checkLocationButton").unbind('click');
@@ -94,23 +86,21 @@ define(
 					$("#checkLocationButton").on('click', function(e) {
 						checkLocation();
 					});
-					$("#photo_enlarged").prop('href', gameData.getImageUrl());
 					$("#photo").prop('src', gameData.getImageUrl());
 
 					gameData.setRoundInit(false);
 				}
 
 				var updateInfobox = function(id, props) {
-					var htmlInner = '<div style="width: 300px;"><h4>Fotos</h4>';
+					var htmlInner = '<div style="width: 300px">';
 					htmlInner += '<h4>Finde den Standort des angezeigten Fotos</h4>'
 					htmlInner += '<button id="checkLocationButton">Prüfe Position</button>'
 					var imageUrl = gameData.getImageUrl();
 					var imageGeoPosition = gameData.getImageGeoPosition();
-					htmlInner += '<br /><br /><div id="damalsPhotoContainer"><a id="photo_enlarged" href="'
+					htmlInner += '<br /><br /><div id="damalsPhotoContainer">'
+							+ '<img id="photo" src="'
 							+ imageUrl
-							+ '"><img id="photo" src="'
-							+ imageUrl
-							+ '" style="width:295px" /></a></div>'
+							+ '" style="max-width:295px" /></div>'
 					mapPositionHandler.setRealMarkerPosition(leaflet.latLng(
 							imageGeoPosition[0], imageGeoPosition[1]))
 					this._div.innerHTML = htmlInner;
@@ -127,6 +117,5 @@ define(
 				$("#checkLocationButton").on('click', function(e) {
 					checkLocation();
 				});
-				$("a#photo_enlarged").fancybox();
 			};
 		});
