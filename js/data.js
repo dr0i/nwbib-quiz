@@ -1,7 +1,5 @@
 define({
-	//geojsonFile: "../places.geojson",
-//	geojsonFile: "../damals.geojson",
-	geojsonFile: "http://localhost/nwbib-quiz/damals.geojson",
+	geojsonFile: "http://localhost/nwbib-quiz/cityphotos.geojson",
 	mapConfig: {
 		center: [51.513888888, 7.465277777],
 		zoom: 8,
