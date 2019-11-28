@@ -1,4 +1,4 @@
-define(["jquery", "leaflet", "leaflet.ajax", "mapclick", "data"], function ($, leaflet, leafletAjax, mapclick, data) {
+define(["jquery", "leaflet", "leaflet.ajax", "data"], function ($, leaflet, leafletAjax, data) {
 	return function (mapPositionHandler, callback, gameData) {
 		var map = leaflet.map('map').setView(data.mapConfig.center, data.mapConfig.zoom)
 		leaflet.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -11,21 +11,26 @@ define(["jquery", "leaflet", "leaflet.ajax", "mapclick", "data"], function ($, l
 			maxZoom: data.mapConfig.maxZoom,
 			minZoom: data.mapConfig.minZoom
 		}).addTo(map);
-  // load GeoJSON from an external file
-  $.getJSON("places.geojson",function(data){
-    L.geoJson(data ,{
-pointToLayer: function(feature,latlng){
-      var marker = L.marker(latlng);
-      marker.bindPopup("Name: <a href="+feature.properties.id+ '>'+feature.properties.label + '</a><br/>Population:' + feature.properties.pop);
-      return marker;
-    }
-
-}).addTo(map);
-});
+	// load GeoJSON from an external file
+		$.getJSON("places.geojson",function(data){
+		L.geoJson(data ,{
+			pointToLayer: function(feature,latlng){
+			var marker = L.marker(latlng);
+			marker.bindPopup("Name: <a href="+feature.properties.id+ '>'+feature.properties.label + '</a><br/>Population:' + feature.properties.pop);
+			return marker;
+			}
+		}).addTo(map).on('click', function(e) {
+			console.log(e.latlng);
+			var marker = leaflet.marker(e.latlng);
+			marker.addTo(markerGroup);
+			mapPositionHandler.setMarkerPosition(e.target.latlng ? e.target.latlng : e.latlng);
+			gameData.setRoundInit(true);
+			$("#checkLocationButton").removeAttr('disabled');
+			})
+		});
 
 		var markerGroup = leaflet.layerGroup();
-		markerGroup.addTo(map);		
-		var clickHandler = new mapclick(markerGroup, mapPositionHandler, gameData);
+		markerGroup.addTo(map);
 
 		$.ajaxSetup({
 			scriptCharset: "utf-8",
@@ -43,7 +48,6 @@ pointToLayer: function(feature,latlng){
 			dataType: "json",
 			success: function (geojsonData) {
 				callback(geojsonData, map, markerGroup)
-				map.on('click', clickHandler.handleClickOnMap);
 			}
 		});
 	};
