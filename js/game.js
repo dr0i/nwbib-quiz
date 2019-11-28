@@ -93,15 +93,15 @@ define(
 				}
 
 				var updateInfobox = function(id, props) {
-					var htmlInner = '<div style="width: 300px">';
-					htmlInner += '<h4>Finde den Standort des angezeigten Fotos</h4>'
+					var htmlInner = '<div style="width: 400px; position: fixed; left: 70px">';
+					htmlInner += '<h2>Finde die zum Foto passende Stadt</h2>'
 					htmlInner += '<button id="checkLocationButton">Prüfe Position</button>'
 					var imageUrl = gameData.getImageUrl();
 					var imageGeoPosition = gameData.getImageGeoPosition();
 					htmlInner += '<br /><br /><div id="damalsPhotoContainer">'
 							+ '<img id="photo" src="'
 							+  imageUrl
-							+ '" style="max-width:295px" /></div>'
+							+ '" style="max-width:395px" /></div>'
 					mapPositionHandler.setRealMarkerPosition(leaflet.latLng(
 							imageGeoPosition[0], imageGeoPosition[1]))
 					this._div.innerHTML = htmlInner;

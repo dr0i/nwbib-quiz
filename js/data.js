@@ -2,8 +2,8 @@ define({
 	geojsonFile: "http://localhost/nwbib-quiz/places.geojson",
 	mapConfig: {
 		center: [51.513888888, 7.465277777],
-		zoom: 8,
-		maxZoom: 9,
+		zoom: 9,
+		maxZoom: 10,
 		minZoom: 6,
 		attribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>',
 		mapWarperAttribution: 'Map data &#64; <a href="http://mapwarper.net/">MapWarper</a> contributors</a>'
