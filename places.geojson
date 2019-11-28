@@ -11,7 +11,7 @@
         "label": "Hamm",
         "id": "http://www.wikidata.org/entity/Q2880",
         "pop": "179185",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Hamm%20Luftbild%20Innenstadt%202007.jpg"
+        "depiction": "images/Hamm20Luftbild20Innenstadt202007.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -22,7 +22,7 @@
         "label": "Hagen",
         "id": "http://www.wikidata.org/entity/Q2871",
         "pop": "187730",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Hagen%20Rathausplatz.jpg"
+        "depiction": "images/Hagen20Rathausplatz.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -33,7 +33,7 @@
         "label": "Düsseldorf",
         "id": "http://www.wikidata.org/entity/Q1718",
         "pop": "617280",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/D%C3%BCsseldorf%20Panorama.jpg"
+        "depiction": "images/DC3BCsseldorf20Panorama.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -44,7 +44,7 @@
         "label": "Wuppertal",
         "id": "http://www.wikidata.org/entity/Q2107",
         "pop": "352390",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Wuppertal%20ansicht.jpg"
+        "depiction": "images/Wuppertal20ansicht.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -55,7 +55,7 @@
         "label": "Gelsenkirchen",
         "id": "http://www.wikidata.org/entity/Q2765",
         "pop": "262528",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Gelsenkirchen%20aug2004%20002.jpg"
+        "depiction": "images/Gelsenkirchen20aug200420002.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -66,7 +66,7 @@
         "label": "Mülheim an der Ruhr",
         "id": "http://www.wikidata.org/entity/Q2899",
         "pop": "170936",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Schloss%20Broich%200504.jpg"
+        "depiction": "images/Schloss20Broich200504.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -77,7 +77,7 @@
         "label": "Bielefeld",
         "id": "http://www.wikidata.org/entity/Q2112",
         "pop": "332552",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Sparrenburg%20innovative%20sights.JPG"
+        "depiction": "images/Sparrenburg20innovative20sights.JPG"
 }},{
       "type": "Feature",
       "geometry": {
@@ -88,7 +88,7 @@
         "label": "Recklinghausen",
         "id": "http://www.wikidata.org/entity/Q3050",
         "pop": "113360",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Recklinghausen%2C%20Rathaus%20--%202015%20--%207398.jpg"
+        "depiction": "images/Recklinghausen2C20Rathaus20--20201520--207398.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -99,7 +99,7 @@
         "label": "Solingen",
         "id": "http://www.wikidata.org/entity/Q2942",
         "pop": "158803",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Clemens.jpg"
+        "depiction": "images/Clemens.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -110,7 +110,7 @@
         "label": "Remscheid",
         "id": "http://www.wikidata.org/entity/Q3097",
         "pop": "110584",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Remscheid%20rathaus.jpg"
+        "depiction": "images/Remscheid20rathaus.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -121,7 +121,7 @@
         "label": "Herne",
         "id": "http://www.wikidata.org/entity/Q2904",
         "pop": "156490",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Cranger%20Kirmes%20-%20panoramio.jpg"
+        "depiction": "images/Cranger20Kirmes20-20panoramio.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -132,7 +132,7 @@
         "label": "Siegen",
         "id": "http://www.wikidata.org/entity/Q3167",
         "pop": "102337",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Siegen%20-%20panoramio%20%289%29.jpg"
+        "depiction": "images/Siegen20-20panoramio2028929.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -143,7 +143,7 @@
         "label": "Paderborn",
         "id": "http://www.wikidata.org/entity/Q2971",
         "pop": "149075",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Dom%20zu%20paderborn1.jpg"
+        "depiction": "images/Dom20zu20paderborn1.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -154,7 +154,7 @@
         "label": "Bochum",
         "id": "http://www.wikidata.org/entity/Q2103",
         "pop": "364628",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Bergbaumuseum%20Bochum%20bei%20Nacht.JPG"
+        "depiction": "images/Bergbaumuseum20Bochum20bei20Nacht.JPG"
 }},{
       "type": "Feature",
       "geometry": {
@@ -165,7 +165,7 @@
         "label": "Paderborn",
         "id": "http://www.wikidata.org/entity/Q2971",
         "pop": "149075",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Rathaus%20Paderborn%202.jpg"
+        "depiction": "images/Rathaus20Paderborn202.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -176,7 +176,7 @@
         "label": "Bergisch Gladbach",
         "id": "http://www.wikidata.org/entity/Q3117",
         "pop": "111627",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Ausblick%20Bergisch%20Gladbach.jpg"
+        "depiction": "images/Ausblick20Bergisch20Gladbach.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -187,7 +187,7 @@
         "label": "Moers",
         "id": "http://www.wikidata.org/entity/Q3132",
         "pop": "103949",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Moers%20schloss%20211204.jpg"
+        "depiction": "images/Moers20schloss20211204.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -198,7 +198,7 @@
         "label": "Mönchengladbach",
         "id": "http://www.wikidata.org/entity/Q2758",
         "pop": "260925",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/M%C3%B6nchengladbach%20m%C3%BCnster.jpg"
+        "depiction": "images/MC3B6nchengladbach20mC3BCnster.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -209,7 +209,7 @@
         "label": "Oberhausen",
         "id": "http://www.wikidata.org/entity/Q2838",
         "pop": "211382",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Oberhausen%20-%20Neue%20Mitte%2BGasometer%20%28Aussichtsturm%20Knappenhalde%29%2001%20ies.jpg"
+        "depiction": "images/Oberhausen20-20Neue20Mitte2BGasometer2028Aussichtsturm20Knappenhalde29200120ies.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -220,7 +220,7 @@
         "label": "Bottrop",
         "id": "http://www.wikidata.org/entity/Q3069",
         "pop": "117364",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Altmarkt%20Horster%20Str.%20Bottrop.JPG"
+        "depiction": "images/Altmarkt20Horster20Str.20Bottrop.JPG"
 }},{
       "type": "Feature",
       "geometry": {
@@ -231,7 +231,7 @@
         "label": "Essen",
         "id": "http://www.wikidata.org/entity/Q2066",
         "pop": "590194",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Essen-S%C3%BCdviertel%20Luft.jpg"
+        "depiction": "images/Essen-SC3BCdviertel20Luft.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -242,7 +242,7 @@
         "label": "Neuss",
         "id": "http://www.wikidata.org/entity/Q2948",
         "pop": "153810",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Neuss%2C%20Rathaus%202008.JPG"
+        "depiction": "images/Neuss2C20Rathaus202008.JPG"
 }},{
       "type": "Feature",
       "geometry": {
@@ -253,7 +253,7 @@
         "label": "Dortmund",
         "id": "http://www.wikidata.org/entity/Q1295",
         "pop": "585813",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Phoenixsee%20Dortmund%2C%20Deutschland.jpg"
+        "depiction": "images/Phoenixsee20Dortmund2C20Deutschland.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -264,7 +264,7 @@
         "label": "Köln",
         "id": "http://www.wikidata.org/entity/Q365",
         "pop": "1080394",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Stadtbild%20K%C3%B6ln%20%2850MP%29.jpg"
+        "depiction": "images/Stadtbild20KC3B6ln202850MP29.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -275,7 +275,7 @@
         "label": "Aachen",
         "id": "http://www.wikidata.org/entity/Q1017",
         "pop": "246272",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Blick%20AC%20Dom%20von%20St%20Jakob.JPG"
+        "depiction": "images/Blick20AC20Dom20von20St20Jakob.JPG"
 }},{
       "type": "Feature",
       "geometry": {
@@ -286,7 +286,7 @@
         "label": "Leverkusen",
         "id": "http://www.wikidata.org/entity/Q2938",
         "pop": "163113",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Leverkusen-Schloss-Morsbroich%20Hauptgeb%C3%A4ude.jpg"
+        "depiction": "images/Leverkusen-Schloss-Morsbroich20HauptgebC3A4ude.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -297,7 +297,7 @@
         "label": "Münster",
         "id": "http://www.wikidata.org/entity/Q2742",
         "pop": "313559",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Muenster-100725-16079-Lamberti.jpg"
+        "depiction": "images/Muenster-100725-16079-Lamberti.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -308,7 +308,7 @@
         "label": "Duisburg",
         "id": "http://www.wikidata.org/entity/Q2100",
         "pop": "498590",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Duisburg%20-%20Schwanentorbr%C3%BCcke%201.jpg"
+        "depiction": "images/Duisburg20-20SchwanentorbrC3BCcke201.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -319,7 +319,7 @@
         "label": "Bonn",
         "id": "http://www.wikidata.org/entity/Q586",
         "pop": "327919",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Altes%20Rathaus%20Bonn.jpg"
+        "depiction": "images/Altes20Rathaus20Bonn.jpg"
 }},{
       "type": "Feature",
       "geometry": {
@@ -330,7 +330,7 @@
         "label": "Bochum",
         "id": "http://www.wikidata.org/entity/Q2103",
         "pop": "364920",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Bergbaumuseum%20Bochum%20bei%20Nacht.JPG"
+        "depiction": "images/Bergbaumuseum20Bochum20bei20Nacht.JPG"
 }},{
       "type": "Feature",
       "geometry": {
@@ -341,6 +341,6 @@
         "label": "Krefeld",
         "id": "http://www.wikidata.org/entity/Q2805",
         "pop": "226699",
-        "depiction": "http://commons.wikimedia.org/wiki/Special:FilePath/Pottb.jpg"
+        "depiction": "images/Pottb.jpg"
 }}
 ]}

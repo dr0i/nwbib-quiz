@@ -1,14 +1,22 @@
-
 /* Copyright 2019 hbz, Pascal Christoph. Licensed under the EPL 2.0*/
+
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import javax.imageio.ImageIO;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.MappingIterator;
@@ -21,21 +29,22 @@ import com.fasterxml.jackson.dataformat.csv.CsvSchema;
  * @author: dr0i
  */
 public class CreateGeoJson {
-    private static BufferedWriter writer;
+    private static BufferedWriter placesWriter;
+
     private static boolean firstEntry = true;
 
     public static void main(String... args) {
         try {
             List<Map<String, String>> csv = read(
                     new File("/home/pc/git/nwbib-quiz/src/main/resources/places.csv"));
-            writer = new BufferedWriter(new OutputStreamWriter(
+            placesWriter = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream("places.geojson"), StandardCharsets.UTF_8));
-            writer.write(geoJsonHead);
+            placesWriter.write(geoJsonHead);
             csv.forEach(en -> {
                 getJsonEntry(en);
             });
-            writer.write("\n]}");
-            writer.close();
+            placesWriter.write("\n]}");
+            placesWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,15 +85,62 @@ public class CreateGeoJson {
     private static void getJsonEntry(Map<String, String> e) {
         try {
             if (!firstEntry)
-                writer.write(",");
-            writer.write(String.format(geoJsonEntry,
+                placesWriter.write(",");
+            placesWriter.write(String.format(geoJsonEntry,
                     e.get("location").replaceAll("Point\\((.*) (.*)\\)", "$1,$2"),
                     e.get("cityLabel"), e.get("city"), e.get("pop").replaceAll("\\..*$", ""),
-                    e.get("img")));
+                    loadAndScaleAndWriteCityImage(e.get("img"))));
             firstEntry = false;
         } catch (IOException e1) {
             e1.printStackTrace();
         }
+    }
+
+    /**
+     * Resizes an image by a percentage of original size (proportional).
+     * 
+     * @param inputImagePath  Path of the original image
+     * @param outputImagePath Path to save the resized image
+     * @param percent         a double number specifies percentage of the output
+     *                        image over the input image.
+     * @throws IOException
+     */
+    private static String loadAndScaleAndWriteCityImage(final String inputImageUrl) {
+        BufferedImage inputImage;
+        String scaledImageFn = "";
+        try {
+            inputImage = ImageIO.read(getFinalURL(inputImageUrl));
+            BufferedImage scaledImage = imageToBufferedImage(
+                    inputImage.getScaledInstance(400, -1, Image.SCALE_SMOOTH));
+            // writes to output file
+            scaledImageFn = "images/" + inputImageUrl.replaceAll(".*/", "").replaceAll("%", "");
+            ImageIO.write(scaledImage, "jpg", new File(scaledImageFn));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return scaledImageFn;
+    }
+
+    public static BufferedImage imageToBufferedImage(Image im) {
+        BufferedImage bi = new BufferedImage(im.getWidth(null), im.getHeight(null),
+                BufferedImage.TYPE_INT_RGB);
+        Graphics bg = bi.getGraphics();
+        bg.drawImage(im, 0, 0, null);
+        bg.dispose();
+        return bi;
+    }
+
+    public static URL getFinalURL(String url) throws IOException {
+        HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+        con.setInstanceFollowRedirects(false);
+        con.connect();
+        con.getInputStream();
+        if (con.getResponseCode() == HttpURLConnection.HTTP_MOVED_PERM
+                || con.getResponseCode() == HttpURLConnection.HTTP_MOVED_TEMP) {
+            String redirectUrl = con.getHeaderField("Location");
+            return getFinalURL(redirectUrl);
+        }
+        return new URL(url);
     }
 
 }

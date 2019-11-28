@@ -1,5 +1,5 @@
 define({
-	geojsonFile: "http://localhost/nwbib-quiz/cityphotos.geojson",
+	geojsonFile: "http://localhost/nwbib-quiz/places.geojson",
 	mapConfig: {
 		center: [51.513888888, 7.465277777],
 		zoom: 8,
@@ -54,7 +54,7 @@ define({
 			},
 			getImageUrl: function() {
 				if (data) {
-					return data.features[index].properties["urlImage"] || imageUrl;
+					return data.features[index].properties["depiction"] || imageUrl;
 				} else {
 					return imageUrl;
 				}

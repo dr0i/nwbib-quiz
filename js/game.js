@@ -100,7 +100,7 @@ define(
 					var imageGeoPosition = gameData.getImageGeoPosition();
 					htmlInner += '<br /><br /><div id="damalsPhotoContainer">'
 							+ '<img id="photo" src="'
-							+ imageUrl
+							+  imageUrl
 							+ '" style="max-width:295px" /></div>'
 					mapPositionHandler.setRealMarkerPosition(leaflet.latLng(
 							imageGeoPosition[0], imageGeoPosition[1]))
