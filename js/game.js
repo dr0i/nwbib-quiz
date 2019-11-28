@@ -51,9 +51,10 @@ define(
 					} else {
 						lastSentence = "Sie haben " + scores
 								+ " von 500 Punkten erreicht.";
+						scores = 0;
 					}
 
-					alert("Ihr Marker ist " + distanceStr
+					alert("Diese Stadt ist " + distanceStr
 							+ " von " + gameData.getCityName() + " entfernt."
 							+ "\nSie bekommen " + thisRoundScore + " Punkte."
 							+ "\n" + lastSentence);
