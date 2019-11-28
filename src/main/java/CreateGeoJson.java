@@ -1,6 +1,5 @@
 /* Copyright 2019 hbz, Pascal Christoph. Licensed under the EPL 2.0*/
 
-
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -24,7 +23,7 @@ import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 
 /* Parses the places.csv and generates a geojson file out if.
- * The output can be used like in "map.html" to visualize the data on a map.
+ * The output can be used to visualize the data on a map using e.g. javascript leaflet.
  * 
  * @author: dr0i
  */
@@ -36,7 +35,7 @@ public class CreateGeoJson {
     public static void main(String... args) {
         try {
             List<Map<String, String>> csv = read(
-                    new File("/home/pc/git/nwbib-quiz/src/main/resources/places.csv"));
+                    new File("src/main/resources/places.csv"));
             placesWriter = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream("places.geojson"), StandardCharsets.UTF_8));
             placesWriter.write(geoJsonHead);
@@ -50,7 +49,7 @@ public class CreateGeoJson {
         }
     }
 
-    public static List<Map<String, String>> read(File file)
+    private static List<Map<String, String>> read(File file)
             throws JsonProcessingException, IOException {
         List<Map<String, String>> response = new LinkedList<Map<String, String>>();
         CsvMapper mapper = new CsvMapper();
@@ -97,12 +96,10 @@ public class CreateGeoJson {
     }
 
     /**
-     * Resizes an image by a percentage of original size (proportional).
+     * Resizes an image to a fix width, proportionally. Store it locally.
      * 
-     * @param inputImagePath  Path of the original image
-     * @param outputImagePath Path to save the resized image
-     * @param percent         a double number specifies percentage of the output
-     *                        image over the input image.
+     * @param inputImageUrl Url of the original image
+     * @return new local path
      * @throws IOException
      */
     private static String loadAndScaleAndWriteCityImage(final String inputImageUrl) {
@@ -121,7 +118,7 @@ public class CreateGeoJson {
         return scaledImageFn;
     }
 
-    public static BufferedImage imageToBufferedImage(Image im) {
+    private static BufferedImage imageToBufferedImage(Image im) {
         BufferedImage bi = new BufferedImage(im.getWidth(null), im.getHeight(null),
                 BufferedImage.TYPE_INT_RGB);
         Graphics bg = bi.getGraphics();
@@ -130,7 +127,7 @@ public class CreateGeoJson {
         return bi;
     }
 
-    public static URL getFinalURL(String url) throws IOException {
+    private static URL getFinalURL(String url) throws IOException {
         HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
         con.setInstanceFollowRedirects(false);
         con.connect();
