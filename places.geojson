@@ -203,7 +203,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [6.85,51.55]
+        "coordinates": [6.8513,51.47]
       },
       "properties": {
         "label": "Oberhausen",
