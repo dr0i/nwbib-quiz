@@ -39,8 +39,8 @@ public class CreateGeoJson {
             placesWriter = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream("places.geojson"), StandardCharsets.UTF_8));
             placesWriter.write(geoJsonHead);
-            csv.forEach(en -> {
-                getJsonEntry(en);
+            csv.forEach(e -> {
+                makeJsonEntry(e);
             });
             placesWriter.write("\n]}");
             placesWriter.close();
@@ -79,20 +79,27 @@ public class CreateGeoJson {
                       "        \"id\": \"%s\",\n" +
                       "        \"pop\": \"%s\",\n" +
                       "        \"depiction\": \"%s\"\n" +
+                      "        \"depictionMostlyKnownFor\": \"%s\"\n" +
                       "}}";
     // @formatter:on
-    private static void getJsonEntry(Map<String, String> e) {
+    private static void makeJsonEntry(Map<String, String> e) {
         try {
             if (!firstEntry)
                 placesWriter.write(",");
             placesWriter.write(String.format(geoJsonEntry,
                     e.get("location").replaceAll("Point\\((.*) (.*)\\)", "$1,$2"),
                     e.get("cityLabel"), e.get("city"), e.get("pop").replaceAll("\\..*$", ""),
-                    loadAndScaleAndWriteCityImage(e.get("img"))));
+                    loadAndScaleAndWriteCityImage(e.get("img")),
+                    getDepictionMostlyKnownFor(e.get("city"))));
             firstEntry = false;
         } catch (IOException e1) {
             e1.printStackTrace();
         }
+    }
+
+    private static String getDepictionMostlyKnownFor(String city) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
     /**
