@@ -1,14 +1,15 @@
 define({
 	geojsonFile: "http://localhost/nwbib-quiz/places.geojson",
 	mapConfig: {
-		center: [51.513888888, 7.465277777],
-		zoom: 9,
+		center: [51.413888888, 7.265277777],
+		zoom: 8,
 		maxZoom: 10,
 		minZoom: 6,
 		attribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>',
 		mapWarperAttribution: 'Map data &#64; <a href="http://mapwarper.net/">MapWarper</a> contributors</a>'
 	},
 	gameData: function() {
+		var scores = {score: 0};
 		var index = 0;
 		var roundInit = false;
 		var alreadyPlayed = [];
@@ -38,7 +39,10 @@ define({
 			},
 			hasNextRound: function() {
 				return alreadyPlayed.length < 5;
-			},			
+			},
+			getRound: function() {
+				return alreadyPlayed.length;
+			},
 			resetAll: function() {
 				startGame();
 			},
@@ -65,7 +69,7 @@ define({
 				} else {
 					return imageUrl;
 				}
-		},
+			},
 			getImageGeoPosition: function() {
 				if (data) {
 					var coords = data.features[index].geometry.coordinates;
@@ -73,6 +77,16 @@ define({
 				} else {
 					return imageGeoPosition;
 				}
+			},
+			getScore: function() {
+				if (data) {
+					return scores.score;
+				} else {
+					return 0;
+				}
+			},
+			setScore: function(newScore) {
+				scores.score = newScore;
 			}
 		}
 	}

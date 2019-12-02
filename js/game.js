@@ -2,8 +2,6 @@ define(
 		[ "jquery", "icons", "fancybox", "leaflet" ],
 		function($, icons, fancybox, leaflet) {
 			return function(map, markerGroup, mapPositionHandler, gameData) {
-				var scores = 0;
-
 				var getThisRoundScore = function(distance) {
 					if (distance < 10000) {
 						return 100;
@@ -40,18 +38,16 @@ define(
 							.getMarkerPosition(), mapPositionHandler
 							.getRealMarkerPosition())
 					var thisRoundScore = getThisRoundScore(distance);
-					scores = scores + thisRoundScore;
-
+					gameData.setScore(gameData.getScore() + thisRoundScore);
 					distanceStr = Math.round(distance.toFixed(0)/1000) + " km"
 
 					var lastSentence;
 					if (gameData.hasNextRound()) {
 						lastSentence = "Ihre Punkte nach dieser Runde: "
-								+ scores;
+						+ gameData.getScore()
 					} else {
-						lastSentence = "Sie haben " + scores
+						lastSentence = "Sie haben " + gameData.getScore()
 								+ " von 500 Punkten erreicht.";
-						scores = 0;
 					}
 
 					alert("Diese Stadt ist " + distanceStr
@@ -62,6 +58,7 @@ define(
 					if (gameData.hasNextRound()) {
 							nextLocation();
 					} else {
+						updateStatus();
 						$("#checkLocationButton").html('Neu starten');
 						$("#checkLocationButton").unbind('click');
 						$("#checkLocationButton").on('click', function(e) {
@@ -81,6 +78,7 @@ define(
 					markerGroup.eachLayer(function(layer) {
 						map.removeLayer(layer);
 					});
+					updateStatus();
 					$("#checkLocationButton").unbind('click');
 					$("#checkLocationButton").html('Prüfe Position');
 					$("#checkLocationButton").prop('disabled', 'disabled');
@@ -88,18 +86,21 @@ define(
 						checkLocation();
 					});
 					$("#photo").prop('src', gameData.getImageUrl());
-
 					gameData.setRoundInit(false);
+				}
+
+				var updateStatus = function() {
+						document.getElementById("score").innerHTML = "Runde: " + gameData.getRound() +"/5, Punkte: " + gameData.getScore() +"/500";
 				}
 
 				var updateInfobox = function(id, props) {
 					var htmlInner = '<div style="width: 400px; position: fixed; left: 70px">';
-					htmlInner += '<h2>Finde die zum Foto passende Stadt</h2>'
-					htmlInner += '<button id="checkLocationButton">Prüfe Position</button>'
+					var score_ = gameData.getScore();
+					htmlInner += '<h2>Finde die Stadt.<span id="score" style="float: right"></span></h2>'
+					htmlInner += '<button id="checkLocationButton" style="font-size : 20px; width: 100%; height: 100%;;margin:auto;display:block">Prüfe Position</button>'
 					var imageUrl = gameData.getImageUrl();
 					var imageGeoPosition = gameData.getImageGeoPosition();
-					htmlInner += '<br /><br /><div id="damalsPhotoContainer">'
-							+ '<img id="photo" src="'
+					htmlInner += '<img id="photo" src="'
 							+  imageUrl
 							+ '" style="max-width:395px" /></div>'
 					mapPositionHandler.setRealMarkerPosition(leaflet.latLng(
@@ -108,11 +109,10 @@ define(
 				};
 
 				var info = leaflet.control();
-
 				info.update = updateInfobox;
 				info.onAdd = addInfobox;
-
 				info.addTo(map);
+				updateStatus();
 
 				$("#checkLocationButton").prop('disabled', 'disabled');
 				$("#checkLocationButton").on('click', function(e) {
