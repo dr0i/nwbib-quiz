@@ -43,16 +43,16 @@ define(
 
 					var lastSentence;
 					if (gameData.hasNextRound()) {
-						lastSentence = "Ihre Punkte nach dieser Runde: "
+						lastSentence = "Deine Punkte nach dieser Runde: "
 						+ gameData.getScore()
 					} else {
-						lastSentence = "Sie haben " + gameData.getScore()
+						lastSentence = "Du hast " + gameData.getScore()
 								+ " von 500 Punkten erreicht.";
 					}
 
-					alert("Diese Stadt ist " + distanceStr
+					alert("Die gewählte Stadt ist " + distanceStr
 							+ " von " + gameData.getCityName() + " entfernt."
-							+ "\nSie bekommen " + thisRoundScore + " Punkte."
+							+ "\nDu bekommst " + thisRoundScore + " Punkte."
 							+ "\n" + lastSentence);
 
 					if (gameData.hasNextRound()) {
@@ -96,7 +96,7 @@ define(
 				var updateInfobox = function(id, props) {
 					var htmlInner = '<div style="width: 400px; position: fixed; left: 70px">';
 					var score_ = gameData.getScore();
-					htmlInner += '<h2>Finde die Stadt.<span id="score" style="float: right"></span></h2>'
+					htmlInner += '<h2>Finde die Stadt!<span id="score" style="float: right"></span></h2>'
 					htmlInner += '<button id="checkLocationButton" style="font-size : 20px; width: 100%; height: 100%;;margin:auto;display:block">Prüfe Position</button>'
 					var imageUrl = gameData.getImageUrl();
 					var imageGeoPosition = gameData.getImageGeoPosition();
