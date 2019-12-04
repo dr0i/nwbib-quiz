@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.7724,51.2311]
+      },
+      "properties": {
+        "label": "Düsseldorf",
+        "id": "http://www.wikidata.org/entity/Q1718",
+        "pop": "617280",
+        "depiction": "images/DC3BCsseldorf20Panorama.jpg",
+        "depictionMostlyKnownFor": "null"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.1728,51.2606]
+      },
+      "properties": {
+        "label": "Wuppertal",
+        "id": "http://www.wikidata.org/entity/Q2107",
+        "pop": "352390",
+        "depiction": "images/Wuppertal20ansicht.jpg",
+        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Solingen%20wappen.svg?width=270"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.533333333,52.016666666]
+      },
+      "properties": {
+        "label": "Bielefeld",
+        "id": "http://www.wikidata.org/entity/Q2112",
+        "pop": "332552",
+        "depiction": "images/Sparrenburg20innovative20sights.JPG",
+        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Bielefeld%20Logo.svg?width=270"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.216666666,51.483333333]
+      },
+      "properties": {
+        "label": "Bochum",
+        "id": "http://www.wikidata.org/entity/Q2103",
+        "pop": "364628",
+        "depiction": "images/Bergbaumuseum20Bochum20bei20Nacht.JPG",
+        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruhr-Universit%C3%A4t%20Bochum%20logo.svg?width=270"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.013055555,51.450833333]
+      },
+      "properties": {
+        "label": "Essen",
+        "id": "http://www.wikidata.org/entity/Q2066",
+        "pop": "590194",
+        "depiction": "images/Essen-SC3BCdviertel20Luft.jpg",
+        "depictionMostlyKnownFor": "null"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.465277777,51.513888888]
+      },
+      "properties": {
+        "label": "Dortmund",
+        "id": "http://www.wikidata.org/entity/Q1295",
+        "pop": "585813",
+        "depiction": "images/Phoenixsee20Dortmund2C20Deutschland.jpg",
+        "depictionMostlyKnownFor": "null"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.957777777,50.942222222]
+      },
+      "properties": {
+        "label": "Köln",
+        "id": "http://www.wikidata.org/entity/Q365",
+        "pop": "1080394",
+        "depiction": "images/Stadtbild20KC3B6ln202850MP29.jpg",
+        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/K%C3%B6lner%20Dom%20von%20Osten.jpg?width=270"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.6256,51.9625]
+      },
+      "properties": {
+        "label": "Münster",
+        "id": "http://www.wikidata.org/entity/Q2742",
+        "pop": "313559",
+        "depiction": "images/Muenster-100725-16079-Lamberti.jpg",
+        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20WWU%20M%C3%BCnster.svg?width=270"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.7611,51.4322]
+      },
+      "properties": {
+        "label": "Duisburg",
+        "id": "http://www.wikidata.org/entity/Q2100",
+        "pop": "498590",
+        "depiction": "images/Duisburg20-20SchwanentorbrC3BCcke201.jpg",
+        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Lmpano1.jpg?width=270"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.099722222,50.733888888]
+      },
+      "properties": {
+        "label": "Bonn",
+        "id": "http://www.wikidata.org/entity/Q586",
+        "pop": "327919",
+        "depiction": "images/Altes20Rathaus20Bonn.jpg",
+        "depictionMostlyKnownFor": "null"
+}},{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.216666666,51.483333333]
+      },
+      "properties": {
+        "label": "Bochum",
+        "id": "http://www.wikidata.org/entity/Q2103",
+        "pop": "364920",
+        "depiction": "images/Bergbaumuseum20Bochum20bei20Nacht.JPG",
+        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruhr-Universit%C3%A4t%20Bochum%20logo.svg?width=270"
+}}
+]}

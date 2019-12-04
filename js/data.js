@@ -1,14 +1,15 @@
 define({
-	geojsonFile: "http://localhost/nwbib-quiz/places.geojson",
+	geojsonFile: "http://localhost/nwbib-quiz/"+geojsonFile,
 	mapConfig: {
-		center: [51.513888888, 7.465277777],
-		zoom: 9,
+		center: [51.413888888, 7.265277777],
+		zoom: 8,
 		maxZoom: 10,
 		minZoom: 6,
 		attribution: 'Map data &#64; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors</a>',
 		mapWarperAttribution: 'Map data &#64; <a href="http://mapwarper.net/">MapWarper</a> contributors</a>'
 	},
 	gameData: function() {
+		var scores = {score: 0};
 		var index = 0;
 		var roundInit = false;
 		var alreadyPlayed = [];
@@ -21,8 +22,12 @@ define({
 		};
 		var startGame = function() {
 			alreadyPlayed = [];
-			index = Math.floor(Math.random() * Math.floor(data.features.length))
-			alreadyPlayed.push(index);
+			if (!roundInit) {
+				index = Math.floor(Math.random() * Math.floor(data.features.length))
+				alreadyPlayed.push(index);
+			}
+			console.log("alreadyPlayed:"+alreadyPlayed.length);
+			scores.score=0;
 		};
 		
 		return {
@@ -38,7 +43,10 @@ define({
 			},
 			hasNextRound: function() {
 				return alreadyPlayed.length < 5;
-			},			
+			},
+			getRound: function() {
+				return alreadyPlayed.length;
+			},
 			resetAll: function() {
 				startGame();
 			},
@@ -47,6 +55,7 @@ define({
 				if (alreadyPlayed.indexOf(newIndex) == -1) {
 					index = newIndex;
 					alreadyPlayed.push(index);
+					console.log("nextPhotoRound:"+alreadyPlayed.length);
 					return true;
 				} else {
 					return false;
@@ -54,7 +63,7 @@ define({
 			},
 			getImageUrl: function() {
 				if (data) {
-					return data.features[index].properties["depiction"] || imageUrl;
+					return data.features[index].properties[imageField] || imageUrl;
 				} else {
 					return imageUrl;
 				}
@@ -65,7 +74,7 @@ define({
 				} else {
 					return imageUrl;
 				}
-		},
+			},
 			getImageGeoPosition: function() {
 				if (data) {
 					var coords = data.features[index].geometry.coordinates;
@@ -73,6 +82,16 @@ define({
 				} else {
 					return imageGeoPosition;
 				}
+			},
+			getScore: function() {
+				if (data) {
+					return scores.score;
+				} else {
+					return 0;
+				}
+			},
+			setScore: function(newScore) {
+				scores.score = newScore;
 			}
 		}
 	}

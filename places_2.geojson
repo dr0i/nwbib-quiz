@@ -12,6 +12,7 @@
         "id": "http://www.wikidata.org/entity/Q2880",
         "pop": "179185",
         "depiction": "images/Hamm20Luftbild20Innenstadt202007.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/OtmarAlt1007%200028.jpeg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -23,18 +24,9 @@
         "id": "http://www.wikidata.org/entity/Q2871",
         "pop": "187730",
         "depiction": "images/Hagen20Rathausplatz.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.7724,51.2311]
-      },
-      "properties": {
-        "label": "Düsseldorf",
-        "id": "http://www.wikidata.org/entity/Q1718",
-        "pop": "617280",
-        "depiction": "images/DC3BCsseldorf20Panorama.jpg"
-}},{
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Uni%20hagen%20logo.svg?width=270"
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
@@ -45,6 +37,7 @@
         "id": "http://www.wikidata.org/entity/Q2107",
         "pop": "352390",
         "depiction": "images/Wuppertal20ansicht.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Solingen%20wappen.svg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -56,6 +49,7 @@
         "id": "http://www.wikidata.org/entity/Q2765",
         "pop": "262528",
         "depiction": "images/Gelsenkirchen20aug200420002.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/FC%20Schalke%2004%20Logo.png?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -67,6 +61,7 @@
         "id": "http://www.wikidata.org/entity/Q2899",
         "pop": "170936",
         "depiction": "images/Schloss20Broich200504.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/DEU%20Muelheim%20an%20der%20Ruhr%20COA.svg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -78,18 +73,9 @@
         "id": "http://www.wikidata.org/entity/Q2112",
         "pop": "332552",
         "depiction": "images/Sparrenburg20innovative20sights.JPG"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [7.2,51.616666666]
-      },
-      "properties": {
-        "label": "Recklinghausen",
-        "id": "http://www.wikidata.org/entity/Q3050",
-        "pop": "113360",
-        "depiction": "images/Recklinghausen2C20Rathaus20--20201520--207398.jpg"
-}},{
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Bielefeld%20Logo.svg?width=270"
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
@@ -100,6 +86,7 @@
         "id": "http://www.wikidata.org/entity/Q2942",
         "pop": "158803",
         "depiction": "images/Clemens.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/DEU%20Wuppertal%20COA.svg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -111,6 +98,7 @@
         "id": "http://www.wikidata.org/entity/Q3097",
         "pop": "110584",
         "depiction": "images/Remscheid20rathaus.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Solingen%20wappen.svg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -122,29 +110,9 @@
         "id": "http://www.wikidata.org/entity/Q2904",
         "pop": "156490",
         "depiction": "images/Cranger20Kirmes20-20panoramio.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [8.016666666,50.875555555]
-      },
-      "properties": {
-        "label": "Siegen",
-        "id": "http://www.wikidata.org/entity/Q3167",
-        "pop": "102337",
-        "depiction": "images/Siegen20-20panoramio2028929.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [8.7667,51.7167]
-      },
-      "properties": {
-        "label": "Paderborn",
-        "id": "http://www.wikidata.org/entity/Q2971",
-        "pop": "149075",
-        "depiction": "images/Dom20zu20paderborn1.jpg"
-}},{
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/DEU%20Wanne-Eickel%20COA.svg?width=270"
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
@@ -155,18 +123,9 @@
         "id": "http://www.wikidata.org/entity/Q2103",
         "pop": "364628",
         "depiction": "images/Bergbaumuseum20Bochum20bei20Nacht.JPG"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [8.7667,51.7167]
-      },
-      "properties": {
-        "label": "Paderborn",
-        "id": "http://www.wikidata.org/entity/Q2971",
-        "pop": "149075",
-        "depiction": "images/Rathaus20Paderborn202.jpg"
-}},{
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruhr-Universit%C3%A4t%20Bochum%20logo.svg?width=270"
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
@@ -177,29 +136,9 @@
         "id": "http://www.wikidata.org/entity/Q3117",
         "pop": "111627",
         "depiction": "images/Ausblick20Bergisch20Gladbach.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.619722222,51.459166666]
-      },
-      "properties": {
-        "label": "Moers",
-        "id": "http://www.wikidata.org/entity/Q3132",
-        "pop": "103949",
-        "depiction": "images/Moers20schloss20211204.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.433333333,51.2]
-      },
-      "properties": {
-        "label": "Mönchengladbach",
-        "id": "http://www.wikidata.org/entity/Q2758",
-        "pop": "260925",
-        "depiction": "images/MC3B6nchengladbach20mC3BCnster.jpg"
-}},{
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/DEU%20Bergisch%20Gladbach%20COA.svg?width=270"
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
@@ -210,51 +149,9 @@
         "id": "http://www.wikidata.org/entity/Q2838",
         "pop": "211382",
         "depiction": "images/Oberhausen20-20Neue20Mitte2BGasometer2028Aussichtsturm20Knappenhalde29200120ies.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.922777777,51.524722222]
-      },
-      "properties": {
-        "label": "Bottrop",
-        "id": "http://www.wikidata.org/entity/Q3069",
-        "pop": "117364",
-        "depiction": "images/Altmarkt20Horster20Str.20Bottrop.JPG"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [7.013055555,51.450833333]
-      },
-      "properties": {
-        "label": "Essen",
-        "id": "http://www.wikidata.org/entity/Q2066",
-        "pop": "590194",
-        "depiction": "images/Essen-SC3BCdviertel20Luft.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.693888888,51.200277777]
-      },
-      "properties": {
-        "label": "Neuss",
-        "id": "http://www.wikidata.org/entity/Q2948",
-        "pop": "153810",
-        "depiction": "images/Neuss2C20Rathaus202008.JPG"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [7.465277777,51.513888888]
-      },
-      "properties": {
-        "label": "Dortmund",
-        "id": "http://www.wikidata.org/entity/Q1295",
-        "pop": "585813",
-        "depiction": "images/Phoenixsee20Dortmund2C20Deutschland.jpg"
-}},{
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Nestroy%202009%20%2844%29%20Christoph%20Schlingensief.jpg?width=270"
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
@@ -265,6 +162,7 @@
         "id": "http://www.wikidata.org/entity/Q365",
         "pop": "1080394",
         "depiction": "images/Stadtbild20KC3B6ln202850MP29.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/K%C3%B6lner%20Dom%20von%20Osten.jpg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -276,6 +174,7 @@
         "id": "http://www.wikidata.org/entity/Q1017",
         "pop": "246272",
         "depiction": "images/Blick20AC20Dom20von20St20Jakob.JPG"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Aachener%20Dom.jpg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -287,6 +186,7 @@
         "id": "http://www.wikidata.org/entity/Q2938",
         "pop": "163113",
         "depiction": "images/Leverkusen-Schloss-Morsbroich20HauptgebC3A4ude.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20Bayer.svg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -298,6 +198,7 @@
         "id": "http://www.wikidata.org/entity/Q2742",
         "pop": "313559",
         "depiction": "images/Muenster-100725-16079-Lamberti.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20WWU%20M%C3%BCnster.svg?width=270"
 }},{
       "type": "Feature",
       "geometry": {
@@ -309,18 +210,9 @@
         "id": "http://www.wikidata.org/entity/Q2100",
         "pop": "498590",
         "depiction": "images/Duisburg20-20SchwanentorbrC3BCcke201.jpg"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [7.099722222,50.733888888]
-      },
-      "properties": {
-        "label": "Bonn",
-        "id": "http://www.wikidata.org/entity/Q586",
-        "pop": "327919",
-        "depiction": "images/Altes20Rathaus20Bonn.jpg"
-}},{
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Lmpano1.jpg?width=270"
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
@@ -331,16 +223,6 @@
         "id": "http://www.wikidata.org/entity/Q2103",
         "pop": "364920",
         "depiction": "images/Bergbaumuseum20Bochum20bei20Nacht.JPG"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.566666666,51.333333333]
-      },
-      "properties": {
-        "label": "Krefeld",
-        "id": "http://www.wikidata.org/entity/Q2805",
-        "pop": "226699",
-        "depiction": "images/Pottb.jpg"
+        ,"depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruhr-Universit%C3%A4t%20Bochum%20logo.svg?width=270"
 }}
 ]}
