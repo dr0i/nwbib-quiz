@@ -37,19 +37,8 @@
         "pop": "332552",
         "depiction": "images/Sparrenburg20innovative20sights.JPG",
         "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Bielefeld%20Logo.svg?width=270"
-}},{
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [7.216666666,51.483333333]
-      },
-      "properties": {
-        "label": "Bochum",
-        "id": "http://www.wikidata.org/entity/Q2103",
-        "pop": "364628",
-        "depiction": "images/Bergbaumuseum20Bochum20bei20Nacht.JPG",
-        "depictionMostlyKnownFor": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruhr-Universit%C3%A4t%20Bochum%20logo.svg?width=270"
-}},{
+}},
+{
       "type": "Feature",
       "geometry": {
         "type": "Point",
