@@ -62,6 +62,7 @@ define(
 						$("#checkLocationButton").html('Neu starten');
 						$("#checkLocationButton").unbind('click');
 						$("#checkLocationButton").on('click', function(e) {
+							gameData.setRoundInit(true);
 							gameData.resetAll();
 							nextLocation();
 						});
@@ -86,7 +87,6 @@ define(
 						checkLocation();
 					});
 					$("#photo").prop('src', gameData.getImageUrl());
-					gameData.setRoundInit(false);
 				}
 
 				var updateStatus = function() {

@@ -1,5 +1,5 @@
 define({
-	geojsonFile: "http://localhost/nwbib-quiz/places.geojson",
+	geojsonFile: "http://localhost/nwbib-quiz/"+geojsonFile,
 	mapConfig: {
 		center: [51.413888888, 7.265277777],
 		zoom: 8,
@@ -22,8 +22,12 @@ define({
 		};
 		var startGame = function() {
 			alreadyPlayed = [];
-			index = Math.floor(Math.random() * Math.floor(data.features.length))
-			alreadyPlayed.push(index);
+			if (!roundInit) {
+				index = Math.floor(Math.random() * Math.floor(data.features.length))
+				alreadyPlayed.push(index);
+			}
+			console.log("alreadyPlayed:"+alreadyPlayed.length);
+			scores.score=0;
 		};
 		
 		return {
@@ -51,6 +55,7 @@ define({
 				if (alreadyPlayed.indexOf(newIndex) == -1) {
 					index = newIndex;
 					alreadyPlayed.push(index);
+					console.log("nextPhotoRound:"+alreadyPlayed.length);
 					return true;
 				} else {
 					return false;
@@ -58,7 +63,7 @@ define({
 			},
 			getImageUrl: function() {
 				if (data) {
-					return data.features[index].properties["depiction"] || imageUrl;
+					return data.features[index].properties[imageField] || imageUrl;
 				} else {
 					return imageUrl;
 				}

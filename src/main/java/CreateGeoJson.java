@@ -1,3 +1,4 @@
+
 /* Copyright 2019 hbz, Pascal Christoph. Licensed under the EPL 2.0*/
 
 import java.awt.Graphics;
@@ -5,15 +6,18 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 import javax.imageio.ImageIO;
 
@@ -31,16 +35,28 @@ public class CreateGeoJson {
     private static BufferedWriter placesWriter;
 
     private static boolean firstEntry = true;
+    static HashMap<String, String> wikidata_DepictionMostlyKnownFor;
 
     public static void main(String... args) {
         try {
-            List<Map<String, String>> csv = read(
-                    new File("src/main/resources/places.csv"));
+            List<Map<String, String>> csv = read(new File("src/main/resources/places.csv"));
+            wikidata_DepictionMostlyKnownFor = new HashMap<>();
+            wikidata_DepictionMostlyKnownFor = makeMapWD_depictionMostlyKnownFor(
+                    new File("src/main/resources/wikidataGndConcordance.csv"));
+
+            // 01
+            placesWriter = new BufferedWriter(new OutputStreamWriter(
+                    new FileOutputStream("places_01.geojson"), StandardCharsets.UTF_8));
+            placesWriter.write(geoJsonHead);
+            csv.forEach(entry -> {
+                makeJsonEntry_01(entry);
+            });
+            // 1
             placesWriter = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream("places.geojson"), StandardCharsets.UTF_8));
             placesWriter.write(geoJsonHead);
-            csv.forEach(e -> {
-                makeJsonEntry(e);
+            csv.forEach(entry -> {
+                makeJsonEntry(entry);
             });
             placesWriter.write("\n]}");
             placesWriter.close();
@@ -78,7 +94,7 @@ public class CreateGeoJson {
                       "        \"label\": \"%s\",\n" +
                       "        \"id\": \"%s\",\n" +
                       "        \"pop\": \"%s\",\n" +
-                      "        \"depiction\": \"%s\"\n" +
+                      "        \"depiction\": \"%s\",\n" +
                       "        \"depictionMostlyKnownFor\": \"%s\"\n" +
                       "}}";
     // @formatter:on
@@ -90,16 +106,46 @@ public class CreateGeoJson {
                     e.get("location").replaceAll("Point\\((.*) (.*)\\)", "$1,$2"),
                     e.get("cityLabel"), e.get("city"), e.get("pop").replaceAll("\\..*$", ""),
                     loadAndScaleAndWriteCityImage(e.get("img")),
-                    getDepictionMostlyKnownFor(e.get("city"))));
+                    wikidata_DepictionMostlyKnownFor.get(e.get("city").toString())));
             firstEntry = false;
         } catch (IOException e1) {
             e1.printStackTrace();
         }
     }
 
-    private static String getDepictionMostlyKnownFor(String city) {
-        // TODO Auto-generated method stub
-        return null;
+    // @formatter:on
+    private static void makeJsonEntry_01(Map<String, String> e) {
+        try {
+            if (Integer.parseInt(e.get("pop").replaceAll("\\..*", "")) > 300000) {
+                if (!firstEntry)
+                    placesWriter.write(",");
+                placesWriter.write(String.format(geoJsonEntry,
+                        e.get("location").replaceAll("Point\\((.*) (.*)\\)", "$1,$2"),
+                        e.get("cityLabel"), e.get("city"),
+                        e.get("pop").replaceAll("\\..*$", ""),
+                        loadAndScaleAndWriteCityImage(e.get("img")),
+                        wikidata_DepictionMostlyKnownFor.get(e.get("city").toString())));
+                firstEntry = false;
+            }
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    private static HashMap<String, String> makeMapWD_depictionMostlyKnownFor(File file) {
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String[] line = scanner.nextLine().split(",");
+                if (line.length > 3) {
+                    System.out.println(line[0] + line[3]);
+                    wikidata_DepictionMostlyKnownFor.put(line[0], line[3].replaceAll("\"", ""));
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return wikidata_DepictionMostlyKnownFor;
     }
 
     /**

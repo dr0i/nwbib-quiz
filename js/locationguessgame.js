@@ -16,7 +16,7 @@ require(["mapposition", "map", "game", "data", "leaflet"], function (mapposition
 	var mapPositionHandler = new mapposition();
 	var gameData = data.gameData();
 	var callback = function(geojsonData, theMap, markerGroup) {
-		gameData.setData(geojsonData);	
+		gameData.setData(geojsonData);
 		new game(theMap, markerGroup, mapPositionHandler, gameData);
 	};
 	var theMap = new map(mapPositionHandler, callback, gameData);

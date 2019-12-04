@@ -12,7 +12,7 @@ define(["jquery", "leaflet", "leaflet.ajax", "data"], function ($, leaflet, leaf
 			minZoom: data.mapConfig.minZoom
 		}).addTo(map);
 	// load GeoJSON from an external file
-		$.getJSON("places.geojson",function(data){
+		$.getJSON(geojsonFile,function(data){
 		L.geoJson(data ,{
 			pointToLayer: function(feature,latlng){
 			var marker = L.marker(latlng);
@@ -20,7 +20,6 @@ define(["jquery", "leaflet", "leaflet.ajax", "data"], function ($, leaflet, leaf
 			return marker;
 			}
 		}).addTo(map).on('click', function(e) {
-			console.log(e.latlng);
 			var marker = leaflet.marker(e.latlng);
 			marker.addTo(markerGroup);
 			mapPositionHandler.setMarkerPosition(e.target.latlng ? e.target.latlng : e.latlng);
