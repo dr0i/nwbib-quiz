@@ -42,6 +42,7 @@ define(
 					distanceStr = Math.round(distance.toFixed(0)/1000)
 
 					var lastSentence;
+					updateStatus();
 					if (gameData.hasNextRound()) {
 						lastSentence = "Deine Punkte nach dieser Runde: "
 						+ gameData.getScore()
