@@ -100,7 +100,7 @@ define(
 				}
 
 				var updateInfobox = function(id, props) {
-					var htmlInner = '<div style="width: 400px; position: fixed; left: 70px">';
+					var htmlInner = '<div style="width: 400px; position: fixed; left: 70px; color: black;">';
 					var score_ = gameData.getScore();
 					htmlInner += '<h2>Finde die Stadt!<span id="score" style="float: right"></span></h2>'
 					htmlInner += '<button id="checkLocationButton" style="font-size : 20px; width: 100%; height: 100%;;margin:auto;display:block">Prüfe Position</button>'
