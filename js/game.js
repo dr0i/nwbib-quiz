@@ -39,7 +39,7 @@ define(
 							.getRealMarkerPosition())
 					var thisRoundScore = getThisRoundScore(distance);
 					gameData.setScore(gameData.getScore() + thisRoundScore);
-					distanceStr = Math.round(distance.toFixed(0)/1000) + " km"
+					distanceStr = Math.round(distance.toFixed(0)/1000)
 
 					var lastSentence;
 					if (gameData.hasNextRound()) {
@@ -49,11 +49,17 @@ define(
 						lastSentence = "Du hast " + gameData.getScore()
 								+ " von 500 Punkten erreicht.";
 					}
-
-					alert("Die gewählte Stadt ist " + distanceStr
-							+ " von " + gameData.getCityName() + " entfernt."
-							+ "\nDu bekommst " + thisRoundScore + " Punkte."
+					if (distanceStr == 0) {
+						alert("=^_^=\n" + 
+									"\n" +
+									"Exzellent!");
+	
+					} else {
+						alert("Die gewählte Stadt ist " + distanceStr
+							+ " km von " + gameData.getCityName() + " entfernt."
+							+ "\n\nDu bekommst " + thisRoundScore + " Punkte."
 							+ "\n" + lastSentence);
+					}
 
 					if (gameData.hasNextRound()) {
 							nextLocation();

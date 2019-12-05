@@ -26,7 +26,6 @@ define({
 				index = Math.floor(Math.random() * Math.floor(data.features.length))
 				alreadyPlayed.push(index);
 			}
-			console.log("alreadyPlayed:"+alreadyPlayed.length);
 			scores.score=0;
 		};
 		
@@ -55,7 +54,6 @@ define({
 				if (alreadyPlayed.indexOf(newIndex) == -1) {
 					index = newIndex;
 					alreadyPlayed.push(index);
-					console.log("nextPhotoRound:"+alreadyPlayed.length);
 					return true;
 				} else {
 					return false;
