@@ -32,7 +32,7 @@ Die github commit history zeigt den ersten Beitrag am 28.10. und den letzten am 
 Die Daten sind bereits mit Wikidata verknüpft. Auch gibt es Verknüpfungen zu einer anderen Datenbank, der GND ("Gemeinsame Normdaten", z.B. Autoren, Orte, Schlagworte), die wiederum oft in Wikidata verzeichnet sind. Anders als bei euregio-history.net müssen nicht Literale (Ortsnamen) auf Wikidata gematched werden.
 
 ### Schnittstellen
-Schnittstellen, die zur Erezeugung der Geodaten benutzt wurde:
+Schnittstellen, die zur Erzeugung der Geodaten benutzt wurde:
 
 - [Mittels SPARLQ die wikidata abfragen um alle Städte in NRW zu erhalten, die mehr als 100.000 Einwohner haben](https://github.com/dr0i/nwbib-quiz/blob/master/src/main/resources/sparqlGetBigCities.sparql)
 
