@@ -8,5 +8,7 @@ Die Datensets werden komplett automatisch erzeugt auf Grundlage der https://wiki
 Code basiert auf https://github.com/CodeforLeipzig/codingdavinciost2018.
 
 Blogpost: [zur Datengrundlage](https://blog.lobid.org/2019/10/08/nwbib-at-cdv.html)
+
 Blogpost: [Projektidee](https://blog.lobid.org/2019/10/22/nrw-quiz-idee.html)
+
 [Präsentation vor der Jury](https://slides.lobid.org/nwbib-cdv-2019-jury)
