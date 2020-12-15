@@ -1,5 +1,5 @@
 define({
-	geojsonFile: "http://localhost/nwbib-quiz/"+geojsonFile,
+	geojsonFile: "http://labs.lobid.org/nwbib-quiz/"+geojsonFile,
 	mapConfig: {
 		center: [51.413888888, 7.265277777],
 		zoom: 8,
