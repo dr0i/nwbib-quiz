@@ -1,5 +1,5 @@
 //var siteUrl = window.location.protocol + "//" + window.location.host + "/";
-var siteUrl = "http://labs.lobid.org/nwbib-quiz/";
+var siteUrl = "http://localhost/nwbib-quiz/";
 requirejs.config({
     baseUrl: siteUrl + "js/",
     paths: {
